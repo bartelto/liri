@@ -66,7 +66,21 @@ switch (command) {
           
             console.log(`${result.data.Title} (${result.data.Year})`);
             console.log(`  IMDB Rating: ${result.data.imdbRating}`);
-            console.log(`  Rotten Tomatoes Rating: ${result.data.Ratings[1].Value}`);
+            if (result.data.Ratings.length > 0) {
+                let foundRT = false;
+                result.data.Ratings.forEach(function(element) {
+                    if (element.Source === "Rotten Tomatoes") {
+                        console.log(`  Rotten Tomatoes Rating: ${element.Value}`);
+                        foundRT = true;
+                    }
+                });
+                if (!foundRT) console.log("  Rotten Tomatoes Rating: not available");
+            } else {
+                console.log("  Rotten Tomatoes Rating: not available");
+            }
+            console.log(`  Country: ${result.data.Country} | Language: ${result.data.Language}`);
+            console.log(`  Plot: ${result.data.Plot}`);
+            console.log(`  Starring: ${result.data.Actors}`);
         });
         break;
 
