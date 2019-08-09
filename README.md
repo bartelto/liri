@@ -42,9 +42,11 @@ At a high level, here's how LIRI works:
 
 ## Previews
 
-Inline-style: 
-![alt text](https://github.com/bartelto/liri-node-app/blob/master/documentation/LIRI%20Preview%201.gif "Logo Title Text 1")
+### ```movie-this``` and ```concert-this```
+![Preview 1](https://github.com/bartelto/liri-node-app/blob/master/documentation/liri-preview-1.gif "Preview 1")
 
+### ```spotify-this-song``` and ```do-what-it-says```
+![Preview 2](https://github.com/bartelto/liri-node-app/blob/master/documentation/liri-preview-2.gif "Preview 2")
 
 ## Technologies used
 
