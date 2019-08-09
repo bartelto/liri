@@ -3,7 +3,7 @@ By Todd F. Bartelt
 
 ## Introduction
 
-LIRI is a Node.js app designed to answer a variety of pop-culture questions:
+LIRI is a Node.js app designed to answer a variety of pop-culture questions, such as:
 - Where is my favorite music artist performing?
 - Does Spotify have my favorite new song?
 - Who are the actors in that new movie I heard about?
@@ -46,6 +46,6 @@ Processes the command saved in the file **```random.txt```** to perform one of t
 
 ## The author
 
-This app was written from the ground up by **Todd F. Bartelt** as part of the Full-Stack Web Development program at University of Kansas Professional and Continuing Education.
+This app was written from the ground up by **Todd F. Bartelt** as part of the Full-Stack Web Development program at University of Kansas Professional and Continuing Education. Learn more about Todd at [toddbartelt.com](http://toddbartelt.com).
 
 
