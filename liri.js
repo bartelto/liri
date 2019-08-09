@@ -65,7 +65,7 @@ function movieLookup(movieName) {
         if (err) {
             return console.log('Error occurred: ' + err);
         }
-        output += `\n${result.data.Title} (${result.data.Year})\n  IMDB Rating: ${result.data.imdbRating}`;
+        output += `${result.data.Title} (${result.data.Year})\n  IMDB Rating: ${result.data.imdbRating}`;
         if (result.data.Ratings.length > 0) {
             let foundRT = false;
             result.data.Ratings.forEach(function (element) {
@@ -85,7 +85,7 @@ function movieLookup(movieName) {
         output += `\n  Starring: ${result.data.Actors}`;
 
         console.log(output);
-        logOutputToFile(output);
+        logOutputToFile(`movie-this "${movieName}"\n` + output);
     });
 }
 
@@ -95,11 +95,12 @@ function songLookup(songName) {
         if (err) {
             return console.log('Error occurred: ' + err);
         }
+        output += `${data.tracks.items.length} result(s) for ${songName}:`;
         data.tracks.items.forEach(function (result) {
-            output += `\n${result.artists[0].name} | ${result.name} | ${result.album.name}\n    ${result.external_urls.spotify}`;
+            output += `\n  ${result.artists[0].name} | ${result.name} | ${result.album.name} | ${result.external_urls.spotify}`;
         });
         console.log(output);
-        logOutputToFile(output);
+        logOutputToFile(`spotify-this-song "${songName}"\n` + output);
     });
 }
 
@@ -110,15 +111,16 @@ function concertLookup(artist) {
         output += `${response.data.length} result(s) for ${artist}:`;
         response.data.forEach(function (result) {
             let eventDate = moment(result.datetime).calendar();
-            output += `\n${result.venue.name} | ${result.venue.city}, ${result.venue.region ? result.venue.region : result.venue.country} | ${eventDate}`;
+            output += `\n  ${result.venue.name} | ${result.venue.city}, ${result.venue.region ? result.venue.region : result.venue.country} | ${eventDate}`;
         });
         console.log(output);
-        logOutputToFile(output);
+        logOutputToFile(`concert-this "${artist}"\n` + output);
     });
 }
 
 function logOutputToFile(str) {
     if (str !== "") {
+        str += "\n--------------------------------------------------------------------------------\n"; // separator line
         fs.appendFile("log.txt", str, function(error){ // automatically creates file if needed
             if (error) {
                 return console.log(error);
