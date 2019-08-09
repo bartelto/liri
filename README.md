@@ -33,14 +33,18 @@ Processes the command saved in the file **```random.txt```** to perform one of t
 
 At a high level, here's how LIRI works:
 - The program captures your command from the command line (see above).
-- If the command is ```do-what-it-says```, the program uses **```fs```** to read the content of **```random.txt```** and split the command in the file from the subject matter. It then sends the command text to ```processRequest(command, subject)```.
+- If the command is ```do-what-it-says```, the program uses **```fs```** to read the content of **```random.txt```** and split the command name from the subject matter. It then sends the command text to ```processRequest(command, subject)```.
 - Otherwise, the program just sends the command-line data to ```processRequest(,)```.
 - ```processRequest(,)``` uses a ```switch``` statement to determine which of the three primary commands is being used.
 - Each of the three primary commands is encapulated in its own function. If the given command matches one of the three expected commands, the corresponding function is called.
-- Each function uses ```console.log``` to send the desired info to the terminal/bash, and then appends the same information to **```log.txt```**, which acts as a log of all requests and the results.
+- Each function uses ```console.log``` to send the desired info to the terminal/bash, and then appends the same information to **```log.txt```**, which acts as a log of all requests and their results.
 
 
-## Screenshots
+## Previews
+
+Inline-style: 
+![alt text]("./documentation/LIRI preview 1.gif" "Logo Title Text 1")
+
 
 ## Technologies used
 

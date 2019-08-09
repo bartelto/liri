@@ -14,14 +14,13 @@ var spotify = new Spotify(keys.spotify);
 if (process.argv[2] === "do-what-it-says") {
     // attempt to process request contained in random.txt
     fs.readFile("random.txt", "utf8", function(error, data) {
-        console.log("data:" + data);
         // If the code experiences any errors it will log the error to the console.
         if (error) {
             return console.log(error);
         }
         var dataArr = data.split(",");
         
-        processRequest(dataArr[0], dataArr[1]);
+        processRequest(dataArr[0], dataArr[1].replace(/"/g, ""));
     });
 } else {
     // attempt to process request from the command line
