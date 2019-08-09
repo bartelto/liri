@@ -43,7 +43,7 @@ At a high level, here's how LIRI works:
 ## Previews
 
 Inline-style: 
-![alt text]("./documentation/LIRI preview 1.gif" "Logo Title Text 1")
+![alt text](./documentation/LIRI preview 1.gif "Logo Title Text 1")
 
 
 ## Technologies used
