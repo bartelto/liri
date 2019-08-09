@@ -8,7 +8,7 @@ LIRI is a Node.js app designed to answer a variety of pop-culture questions:
 - Does Spotify have my favorite new song?
 - Who are the actors in that new movie I heard about?
 
-LIRI puts the answers to these qustions at your fingertips by employing three different APIs: Bandsintown, Spotify, and the Online Movie Database.
+LIRI puts the answers to these questions at your fingertips by employing three different APIs: Bandsintown, Spotify, and the Online Movie Database.
 
 ## Using LIRI
 
@@ -34,11 +34,11 @@ Processes the command saved in the file **```random.txt```** to perform one of t
 ## Technologies used
 
 ### NPM packages
-- **node-spotify-api** Simplifies the process of using the Spotify API.
-- **axios** Promise based HTTP client for the browser and node.js.
-- **moment** A lightweight JavaScript date library for parsing, validating, manipulating, and formatting dates.
-- **dotenv** A zero-dependency module that loads environment variables from a .env file into **```process.env```**. 
-- **fs** A package for reading, writing, and appending text files.
+- **```node-spotify-api```** Simplifies the process of using the Spotify API.
+- **```axios```** Promise based HTTP client for the browser and node.js.
+- **```moment```** A lightweight JavaScript date library for parsing, validating, manipulating, and formatting dates.
+- **```dotenv```** A zero-dependency module that loads environment variables from a .env file into **```process.env```**. 
+- **```fs```** A package for reading, writing, and appending text files.
 
 ### APIs used via Axios
 - **Bandsintown**
@@ -46,6 +46,6 @@ Processes the command saved in the file **```random.txt```** to perform one of t
 
 ## The author
 
-This app was written from the ground up by **Todd F. Bartelt** as part of the University of Kansas Full-Stack Web Development program.
+This app was written from the ground up by **Todd F. Bartelt** as part of the Full-Stack Web Development program at University of Kansas Professional and Continuing Education.
 
 
